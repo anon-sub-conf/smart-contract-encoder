@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "smart-contract-encoder"
+version = "0.1.0"
+description = ""
+authors = ["anon-sub-conf <m87751190@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "^2.2.3"
+sentence-transformers = "5.0.0"
+datasets = "^3.2.0"
+pydantic = "^2.10.6"
+accelerate = "^1.9.0"
+matplotlib = "^3.10.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[[tool.poetry.packages]]
+include = "smart_contract_encoder"
+from = "src"
+
+[tool.poetry.scripts]
+setup = "smart_contract_encoder.setup:main"
+
