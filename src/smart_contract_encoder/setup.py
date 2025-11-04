@@ -9,9 +9,6 @@ from sentence_transformers import util
 import json
 
 def main():
-    eval_graphs()
-    #create_query_dataset("test", "smartembed", "untrained", "func_code")
-    exit()
     # process / create datasets
     process_datasets("train", None)
     process_datasets("test", None)
@@ -75,7 +72,7 @@ def main():
     create_query_dataset("test", "sentence_encoder", "finetuned", "code", "all-mpnet-base-v2/code_translation_pairs_32_3000_50_50")
     create_query_dataset("test", "sentence_encoder", "finetuned", "tac_code", "all-mpnet-base-v2/tac_code_translation_pairs_32_3000_50_50")
     create_query_dataset("test", "ngram", "untrained", "opcode")
-
+    create_query_dataset("test", "smartembed", "untrained", "func_code")
     # create evaluation graphs
     eval_graphs()
     dist_graphs()

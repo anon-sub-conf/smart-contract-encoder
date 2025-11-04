@@ -86,7 +86,6 @@ def load_dataset(file_type: str, split: str,  encoder: str = None,
     elif suffix == "pkl":
         return pd.read_pickle(filename)
     elif suffix == "json":
-        print(filename)
         train_data = datasets.load_dataset('json', data_files=str(filename), field="data", split="train")
         eval_data = datasets.load_dataset('json', data_files=str(filename), field="eval", split="train")
         return train_data, eval_data
