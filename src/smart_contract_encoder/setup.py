@@ -3,12 +3,15 @@ from smart_contract_encoder.encoder import *
 from smart_contract_encoder.training_data_creation import *
 from smart_contract_encoder.models.sentence_encoder import *
 from smart_contract_encoder.eval_data_creation import *
+from smart_contract_encoder.nicad_eval_data_creation import *
 from smart_contract_encoder.graphs import *
 import numpy as np
 from sentence_transformers import util
 import json
 
 def main():
+    create_nicad_query_dataset("test", "nicad", "untrained")
+    exit()
     # process / create datasets
     process_datasets("train", None)
     process_datasets("test", None)
