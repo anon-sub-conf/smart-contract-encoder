@@ -67,6 +67,7 @@ class SentenceEncoder(BaseModel):
         return self._model.encode(dataset)
 
     def encode_query(self, dataset, **args):
+        print(dataset)
         return self.encode(dataset)
 
     def encode_document(self, dataset, **args):

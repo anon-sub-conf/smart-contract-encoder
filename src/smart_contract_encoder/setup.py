@@ -9,6 +9,9 @@ from sentence_transformers import util
 import json
 
 def main():
+    eval_graphs()
+    #create_query_dataset("test", "smartembed", "untrained", "func_code")
+    exit()
     # process / create datasets
     process_datasets("train", None)
     process_datasets("test", None)

@@ -19,6 +19,7 @@ class NgramEncoder:
             self._model = CountVectorizer(ngram_range=(5,5), dtype=float)
 
     def encode(self, dataset, **args):
+        #print(dataset)
         if self.trained:
             return self._model.transform(dataset).toarray()
         else:
@@ -35,6 +36,7 @@ class NgramEncoder:
             return self._model.transform(dataset).toarray()
 
     def encode_document(self, dataset, **args):
+        #print(dataset)
         if self.trained:
             return self._model.transform(dataset).toarray()
         else:

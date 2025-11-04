@@ -79,6 +79,9 @@ def create_query_dataset(split, encoder, encoder_version, field, model_to_load =
         corpus_chunk_size=len(df),
     )
     model_field2 = load_encoder(encoder, encoder_version, model_to_load)
+    if encoder == "smartembed":
+        model_field2.dataset = df
+    # exit()
     eval_result = ir_evaluator(model_field2.model)
     metrics = [
         'mrr',
