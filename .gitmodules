@@ -1,0 +1,3 @@
+[submodule "SmartEmbed"]
+	path = SmartEmbed
+	url = git@github.com:anon-sub-conf/SmartEmbed.git
