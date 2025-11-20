@@ -1,3 +1,6 @@
 [submodule "SmartEmbed"]
 	path = SmartEmbed
 	url = git@github.com:anon-sub-conf/SmartEmbed.git
+[submodule "solidity-nicad"]
+	path = solidity-nicad
+	url = git@github.com:anon-sub-conf/solidity-nicad.git
