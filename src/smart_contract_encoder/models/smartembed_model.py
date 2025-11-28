@@ -14,7 +14,7 @@ class SmartEmbed:
         self.similarity_fn_name = 'cosine'
         self.model_card_data = CardData()
         # load saved embeddings, due to python/library version incosistencies with SmartEmbed
-        self.embeddings = pd.read_pickle("./data/SmartEmbed_embeddings.pkl") #TODO move code that generates this in repo
+        self.embeddings = pd.read_csv("./data/SmartEmbed_embeddings.csv")
         self.dataset = None
 
     def encode(self, dataset, **args):

@@ -26,4 +26,6 @@ from = "src"
 
 [tool.poetry.scripts]
 setup = "smart_contract_encoder.setup:main"
+train = "smart_contract_encoder.train:main"
+eval = "smart_contract_encoder.eval:main"
 
