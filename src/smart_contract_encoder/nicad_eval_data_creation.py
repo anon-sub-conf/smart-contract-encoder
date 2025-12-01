@@ -166,13 +166,13 @@ def build_mapping(xml_path: str) -> Dict[str, List[str]]:
     return result
 
 def evaluate_nicad_results():
-    args = ap.parse_args()
-
     pred = build_mapping("nicad_results.xml")
     with open("query_doc_map.json", "r", encoding="utf-8") as f:
         gt = json.load(f)
     k_vals = [1, 5, 10, 15, 20, 25, 35, 45, 55, 65, 75, 85, 95, 105]
     metrics = evaluate_at_cutoffs(gt, pred, k_vals)
+    output_dir = "./results"
+    os.makedirs(output_dir, exist_ok=True)
     with open("./results/nicad_untrained_func_code_results.json", "w", encoding="utf-8") as f:
         json.dump(metrics, f, indent=2, ensure_ascii=False)
 

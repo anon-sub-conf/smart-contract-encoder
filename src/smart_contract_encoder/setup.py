@@ -24,6 +24,11 @@ def main():
     baseline_field = "func_documentation"
     baseline_embeddings = create_embeddings("train", encoder=baseline_enc, encoder_version=baseline_enc_version, field=baseline_field)
 
+    baseline_enc = "sentence_encoder"
+    baseline_enc_version = "untrained"
+    baseline_field = "func_documentation"
+    baseline_embeddings = create_embeddings("test", encoder=baseline_enc, encoder_version=baseline_enc_version, field=baseline_field)
+
     create_pairs_dataset("train", "code")
     create_pairs_dataset("train", "tac_code")
     create_nicad_query_dataset("test", "nicad", "untrained")
